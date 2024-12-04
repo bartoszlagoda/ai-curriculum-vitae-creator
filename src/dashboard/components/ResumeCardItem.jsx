@@ -1,17 +1,37 @@
-import { Notebook } from 'lucide-react'
+import { MoreVertical, Notebook } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
-function ResumeCardItem({resume}) {
+
+function ResumeCardItem({ resume }) {
   return (
-    <Link to={'/dashboard/resume/' + resume.documentId + "/edit"}>
-      <div className='p-14 bg-secondary flex
-      items-center justify-center h-[280px] border border-primary rounded-2xl
+    <div>
+      <Link to={'/dashboard/resume/' + resume.documentId + "/edit"}>
+        <div className='p-14 bg-gradient-to-b 
+      from-pink-100 via-purple-200 to-blue-200
+      flex
+      items-center justify-center h-[280px] 
+      border-t-4 rounded-2xl
       hover:scale-105 transition-all hover:shadow-md shadow-primary'>
-        <Notebook/>
+          <Notebook />
+        </div>
+      </Link>
+      <div className='border p-3 flex justify-between text-white'
+      style={{
+        background:resume?.themeColor
+      }}>
+        <h2 className='text-sm'>{resume.title}</h2>
+        <MoreVertical className='h-4 w-4 cursor-pointer'/>
       </div>
-      <h2 className='text-center my-1'>{resume.title}</h2>
-    </Link>
+    </div>
   )
 }
 
