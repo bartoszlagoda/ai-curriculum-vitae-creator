@@ -47,7 +47,7 @@ function RichTextEditor({onRichTextEditorChange,index,defaultValue}) {
       </div>
       <EditorProvider>
         <Editor 
-        value={defaultValue} onChange={(e)=>{
+        value={value} onChange={(e)=>{
             setValue(e.target.value);
             onRichTextEditorChange(e)
         }}>

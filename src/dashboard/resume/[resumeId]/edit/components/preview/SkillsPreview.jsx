@@ -2,7 +2,7 @@ import React from 'react';
 
 function SkillsPreview({ resumeInfo }) {
   // Domyślny kolor, jeśli `themeColor` nie jest ustawiony
-  const themeColor = resumeInfo?.themeColor || "#ff6666"; 
+  const themeColor = resumeInfo?.themeColor; 
 
   // Warunek ochronny: jeśli brak danych, wyświetl informację
   if (!resumeInfo?.skills || !Array.isArray(resumeInfo.skills)) {

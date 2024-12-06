@@ -14,7 +14,7 @@ function PersonalDetailPreview({resumeInfo}) {
         {resumeInfo?.firstName} {resumeInfo?.lastName}</h2>
       <h2 className='text-center text-sm font-medium'
       style={{
-        color:themeColor
+        color:'black'
       }}>
         {resumeInfo?.jobTitle}</h2>
       <h2 className='text-center font-normal text-xs'

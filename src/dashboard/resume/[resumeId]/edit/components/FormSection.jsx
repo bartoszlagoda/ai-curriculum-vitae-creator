@@ -7,12 +7,13 @@ import Experience from './forms/Experience';
 import Education from './forms/Education';
 import Skills from './forms/Skills';
 import { Link, Navigate, useParams } from 'react-router-dom';
+import ThemeColor from './ThemeColor';
 
 function FormSection() {
 
   const [activeFormIndex, setActiveFormIndex] = useState(1);
   const [enableNext, setEnableNext] = useState(true)
-  const {resumeId}=useParams();
+  const { resumeId } = useParams();
   return (
     <div>
       <div className='flex justify-between items-center'>
@@ -20,7 +21,7 @@ function FormSection() {
           <Link to={"/dashboard"}>
             <Button><Home /></Button>
           </Link>
-          <Button variant="outline" size="sm" className='flex gap-2'><LayoutGrid /> Theme</Button>
+          <ThemeColor />
         </div>
         <div className='flex gap-2'>
           {activeFormIndex > 1 && <Button size='sm'
@@ -42,10 +43,10 @@ function FormSection() {
             activeFormIndex == 4 ?
               <Education enabledNext={(v) => setEnableNext(v)} /> :
               activeFormIndex == 5 ?
-                <Skills enabledNext={(v) => setEnableNext(v)} /> : 
+                <Skills enabledNext={(v) => setEnableNext(v)} /> :
                 activeFormIndex == 5 ?
-                <Navigate to={'/my-resume/' + resumeId + "/view"}/> :
-                null
+                  <Navigate to={'/my-resume/' + resumeId + "/view"} /> :
+                  null
       }
 
       {/** Summary */}

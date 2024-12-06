@@ -128,7 +128,7 @@ function Experience() {
                                 <div className='col-span-2'>
                                     <RichTextEditor
                                         index={index}
-                                        defaultValue={item.workSummary}
+                                        value={item?.workSummary}
                                         onRichTextEditorChange={(event) => handleRichTextEditor(event, 'workSummary', index)} />
                                 </div>
                             </div>
