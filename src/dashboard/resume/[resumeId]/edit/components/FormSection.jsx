@@ -44,7 +44,7 @@ function FormSection() {
               <Education enabledNext={(v) => setEnableNext(v)} /> :
               activeFormIndex == 5 ?
                 <Skills enabledNext={(v) => setEnableNext(v)} /> :
-                activeFormIndex == 5 ?
+                activeFormIndex == 6 ?
                   <Navigate to={'/my-resume/' + resumeId + "/view"} /> :
                   null
       }
