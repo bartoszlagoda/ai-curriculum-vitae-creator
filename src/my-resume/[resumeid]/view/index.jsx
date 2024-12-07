@@ -40,7 +40,7 @@ function ViewResume() {
                         <RWebShare
                             data={{
                                 text: "Here is the link to my CV, where you can view and download it.",
-                                url: import.meta.env.VITE_BASE_URL + "/api" + "/my-resume/"+resumeid+"/view",
+                                url: import.meta.env.VITE_BASE_URL + "/my-resume/"+resumeid+"/view",
                                 title: resumeInfo?.firstName + " " + resumeInfo?.lastName + " resume",
                             }}
                             onClick={() => console.log("shared successfully!")}
