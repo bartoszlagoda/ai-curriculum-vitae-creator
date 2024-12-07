@@ -13,7 +13,7 @@ function FormSection() {
 
   const [activeFormIndex, setActiveFormIndex] = useState(1);
   const [enableNext, setEnableNext] = useState(true)
-  const { resumeId } = useParams();
+  const { resumeid } = useParams();
   return (
     <div>
       <div className='flex justify-between items-center'>
@@ -45,7 +45,7 @@ function FormSection() {
               activeFormIndex == 5 ?
                 <Skills enabledNext={(v) => setEnableNext(v)} /> :
                 activeFormIndex == 6 ?
-                  <Navigate to={'/my-resume/' + resumeId + "/view"} /> :
+                  <Navigate to={'/my-resume/' + resumeid + "/view"} /> :
                   null
       }
 
