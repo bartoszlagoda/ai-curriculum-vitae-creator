@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Header from '../../../components/custom/Header'
 import { Button } from '@/components/ui/button'
-import ResumePreview from '../../../dashboard/resume/[resumeId]/edit/components/ResumePreview'
+import ResumePreview from '../../../dashboard/resume/[resumeid]/edit/components/ResumePreview'
 import { ResumeInfoContext } from '../../../context/ResumeInfoContext'
 import GlobalApi from '../../../../service/GlobalApi'
 import { useParams } from 'react-router-dom'

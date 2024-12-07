@@ -10,7 +10,7 @@ import {
 import Home from './home/index.jsx'
 import Dashboard from './dashboard/index.jsx'
 import { ClerkProvider } from '@clerk/clerk-react'
-import EditResume from './dashboard/resume/[resumeId]/edit/index.jsx'
+import EditResume from './dashboard/resume/[resumeid]/edit/index.jsx'
 import ViewResume from './my-resume/[resumeid]/view/index.jsx'
 
 // Import your publishable key
