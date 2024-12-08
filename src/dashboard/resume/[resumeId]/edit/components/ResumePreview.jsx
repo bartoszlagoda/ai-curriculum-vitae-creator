@@ -22,13 +22,13 @@ function ResumePreview() {
       <SummaryPreview resumeInfo={resumeInfo}/>
 
       {/* Professional experience */}
-      <ProfessionalExperiencePreview resumeInfo={resumeInfo}/>
+      {resumeInfo?.experience?.length>0&& <ProfessionalExperiencePreview resumeInfo={resumeInfo}/>}
 
       {/* Educational */}
-      <EducationalPreview resumeInfo={resumeInfo}/>
+      {resumeInfo?.education?.length>0&& <EducationalPreview resumeInfo={resumeInfo}/>}
 
       {/* Skills */}
-      <SkillsPreview resumeInfo={resumeInfo}/>
+      {resumeInfo?.skills?.length>0&& <SkillsPreview resumeInfo={resumeInfo}/>}
 
       
     </div>
