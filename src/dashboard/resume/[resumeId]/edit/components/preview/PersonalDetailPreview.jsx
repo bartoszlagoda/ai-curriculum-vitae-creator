@@ -6,7 +6,7 @@ function PersonalDetailPreview({ resumeInfo }) {
   const themeColor = resumeInfo?.themeColor || "#ff6666";
 
   return (
-    <div className="flex items-center justify-center gap-6">
+    <div className="flex items-center justify-center gap-20">
       {/* Zdjęcie */}
       {resumeInfo?.photo && (
         <img
@@ -35,20 +35,20 @@ function PersonalDetailPreview({ resumeInfo }) {
           }}>
           {resumeInfo?.address}
         </h2>
-        <div className='flex justify-between'>
-          <h2 className='font-normal text-xs'
+        {/* <div className='flex justify-between'> */}
+          <h2 className='text-center font-normal text-xs'
             style={{
               color: themeColor
             }}>
             {resumeInfo?.phone}
           </h2>
-          <h2 className='font-normal text-xs'
+          <h2 className='text-center font-normal text-xs'
             style={{
               color: themeColor
             }}>
             {resumeInfo?.email}
           </h2>
-        </div>
+        {/* </div> */}
       </div>
       <hr className='border-[1.5px] my-2'
         style={{
